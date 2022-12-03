@@ -1,0 +1,5 @@
+{
+  // add env to fix hydration...
+  "env": {"browser": true,"node": true,"es6": true},
+  "extends": ["eslint:recommended","next/core-web-vitals"]
+}
