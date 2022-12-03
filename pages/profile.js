@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import { getError } from '../utils/error';
 
 function ProfileScreen() {
-    const {data:session}=useSession({})
+    const {data:session}=useSession()
     const {
         handleSubmit,
         register,
@@ -16,9 +16,9 @@ function ProfileScreen() {
         formState: { errors },
       } = useForm();
     useEffect(()=>{
-        setValue('name',session.user.name)
-        setValue('email',session.user.email)
-    },[session.user,setValue])
+        setValue('name',session?.user.name)
+        setValue('email',session?.user.email)
+    },[session?.user,setValue])
 
     const submitHandler=async({name,email,password,})=>{
         try {
